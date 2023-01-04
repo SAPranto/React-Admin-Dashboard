@@ -6,10 +6,11 @@ import { Navbar, Footer, Sidebar } from './components';
 import { Ecommerce, Orders, Employees, Stacked, Pyramid, Customers, Line, Area, Bar, Pie, Financial, ColorMapping} from './pages';
 import './App.css';
 
+
 const App = () => {
   return (
     <Router>
-    <div>Admin Dashboard</div>  
+    <Sidebar></Sidebar>  
     <Routes>
     {/* dashboard  */}
     <Route path="/" element={(<Ecommerce />)} />
