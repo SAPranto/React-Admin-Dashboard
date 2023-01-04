@@ -1,26 +1,9 @@
-import React, { createContext, useContext, useState } from 'react';
+import React from 'react'
 
-const StateContext = createContext();
-
-const initialState = {
-  cart: false,
-  userProfile: false,
-  notification: false,
-};
-
-export const ContextProvider = ({ children }) => {
-  const [screenSize, setScreenSize] = useState(undefined);
-  const [activeMenu, setActiveMenu] = useState(true);
-  const [isClicked, setIsClicked] = useState(initialState);
-
-
-  const handleClick = (clicked) => setIsClicked({ ...initialState, [clicked]: true });
-
+const ContextProvider = () => {
   return (
-    <StateContext.Provider value={{   activeMenu, screenSize, setScreenSize, handleClick, isClicked, initialState, setIsClicked, setActiveMenu }}>
-      {children}
-    </StateContext.Provider>
-  );
-};
+    <div>ContextProvider</div>
+  )
+}
 
-export const useStateContext = () => useContext(StateContext);
+export default ContextProvider
