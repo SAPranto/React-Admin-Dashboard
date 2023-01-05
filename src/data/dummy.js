@@ -1,11 +1,11 @@
+/* eslint-disable */
 import React from 'react';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
-import { FiShoppingBag, FiBarChart, FiCreditCard, FiStar, FiShoppingCart } from 'react-icons/fi';
-import { BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft, BsEye } from 'react-icons/bs';
+import { FiShoppingBag, FiBarChart, FiStar, FiShoppingCart } from 'react-icons/fi';
+import { BsBoxSeam, BsChatLeft, BsEye } from 'react-icons/bs';
 import { RiContactsLine } from 'react-icons/ri';
 import { MdOutlineSupervisorAccount, MdAddShoppingCart } from 'react-icons/md';
 import { HiOutlineRefresh } from 'react-icons/hi';
-import { TiTick } from 'react-icons/ti';
 import { GrLocation } from 'react-icons/gr';
 import avatar from './avatar.jpg';
 import avatar2 from './avatar2.jpg';
@@ -38,25 +38,6 @@ export const gridOrderStatus = (props) => (
     {props.Status}
   </button>
 );
-
-export const kanbanGrid = [
-  { headerText: 'To Do',
-    keyField: 'Open',
-    allowToggle: true },
-
-  { headerText: 'In Progress',
-    keyField: 'InProgress',
-    allowToggle: true },
-
-  { headerText: 'Testing',
-    keyField: 'Testing',
-    allowToggle: true,
-    isExpanded: false },
-
-  { headerText: 'Done',
-    keyField: 'Close',
-    allowToggle: true },
-];
 const gridEmployeeProfile = (props) => (
   <div className="flex items-center gap-2">
     <img
@@ -256,57 +237,6 @@ export const barCustomSeries = [
     },
   },
 ];
-export const colorMappingData = [
-  [
-    { x: 'Jan', y: 6.96 },
-    { x: 'Feb', y: 8.9 },
-    { x: 'Mar', y: 12 },
-    { x: 'Apr', y: 17.5 },
-    { x: 'May', y: 22.1 },
-    { x: 'June', y: 25 },
-    { x: 'July', y: 29.4 },
-    { x: 'Aug', y: 29.6 },
-    { x: 'Sep', y: 25.8 },
-    { x: 'Oct', y: 21.1 },
-    { x: 'Nov', y: 15.5 },
-    { x: 'Dec', y: 9.9 },
-  ],
-  ['#FFFF99'],
-  ['#FFA500'],
-  ['#FF4040'],
-];
-
-export const rangeColorMapping = [
-  { label: '1°C to 10°C',
-    start: '1',
-    end: '10',
-    colors: colorMappingData[1] },
-
-  { label: '11°C to 20°C',
-    start: '11',
-    end: '20',
-    colors: colorMappingData[2] },
-
-  { label: '21°C to 30°C',
-    start: '21',
-    end: '30',
-    colors: colorMappingData[3] },
-
-];
-
-export const ColorMappingPrimaryXAxis = {
-  valueType: 'Category',
-  majorGridLines: { width: 0 },
-  title: 'Months',
-};
-
-export const ColorMappingPrimaryYAxis = {
-  lineStyle: { width: 0 },
-  majorTickLines: { width: 0 },
-  minorTickLines: { width: 0 },
-  labelFormat: '{value}°C',
-  title: 'Temperature',
-};
 
 export const FinancialPrimaryXAxis = {
   valueType: 'DateTime',
@@ -388,7 +318,7 @@ export const customersGrid = [
 ];
 
 export const employeesGrid = [
-  { headerText: 'Employee',
+  { headerText: 'Products',
     width: '150',
     template: gridEmployeeProfile,
     textAlign: 'Center' },
@@ -397,28 +327,23 @@ export const employeesGrid = [
     width: '0',
     textAlign: 'Center',
   },
-  { field: 'Title',
-    headerText: 'Designation',
-    width: '170',
-    textAlign: 'Center',
-  },
-  { headerText: 'Country',
+  { headerText: 'Product Location',
     width: '120',
     textAlign: 'Center',
     template: gridEmployeeCountry },
 
   { field: 'HireDate',
-    headerText: 'Hire Date',
+    headerText: 'Product Uploaded',
     width: '135',
     format: 'yMd',
     textAlign: 'Center' },
 
   { field: 'ReportsTo',
-    headerText: 'Reports To',
+    headerText: 'Uploaded By',
     width: '120',
     textAlign: 'Center' },
   { field: 'EmployeeID',
-    headerText: 'Employee ID',
+    headerText: 'Product ID',
     width: '125',
     textAlign: 'Center' },
 ];
@@ -454,61 +379,6 @@ export const links = [
         icon: <RiContactsLine />,
       },
     ],
-  },
-];
-
-export const cartData = [
-  {
-    image:
-      product5,
-    name: 'butterscotch ice-cream',
-    category: 'Milk product',
-    price: '$250',
-  },
-  {
-    image:
-      product6,
-    name: 'Supreme fresh tomato',
-    category: 'Vegetable Item',
-    price: '$450',
-  },
-  {
-    image:
-      product7,
-    name: 'Red color candy',
-    category: 'Food Item',
-    price: '$190',
-  },
-];
-
-export const chatData = [
-  {
-    image:
-      avatar2,
-    message: 'Roman Joined the Team!',
-    desc: 'Congratulate him',
-    time: '9:08 AM',
-  },
-  {
-    image:
-      avatar3,
-    message: 'New message received',
-    desc: 'Salma sent you new message',
-    time: '11:56 AM',
-  },
-  {
-    image:
-      avatar4,
-    message: 'New Payment received',
-    desc: 'Check your earnings',
-    time: '4:39 AM',
-  },
-  {
-    image:
-      avatar,
-    message: 'Jolly completed tasks',
-    desc: 'Assign her new tasks',
-    time: '1:12 AM',
   },
 ];
 
@@ -548,57 +418,6 @@ export const earningData = [
     title: 'Refunds',
     iconColor: 'rgb(0, 194, 146)',
     iconBg: 'rgb(235, 250, 242)',
-    pcColor: 'red-600',
-  },
-];
-
-export const recentTransactions = [
-  {
-    icon: <BsCurrencyDollar />,
-    amount: '+$350',
-    title: 'Paypal Transfer',
-    desc: 'Money Added',
-    iconColor: '#03C9D7',
-    iconBg: '#E5FAFB',
-    pcColor: 'green-600',
-  },
-  {
-    icon: <BsShield />,
-    amount: '-$560',
-    desc: 'Bill Payment',
-    title: 'Wallet',
-    iconColor: 'rgb(0, 194, 146)',
-    iconBg: 'rgb(235, 250, 242)',
-    pcColor: 'red-600',
-  },
-  {
-    icon: <FiCreditCard />,
-    amount: '+$350',
-    title: 'Credit Card',
-    desc: 'Money reversed',
-    iconColor: 'rgb(255, 244, 229)',
-    iconBg: 'rgb(254, 201, 15)',
-
-    pcColor: 'green-600',
-  },
-  {
-    icon: <TiTick />,
-    amount: '+$350',
-    title: 'Bank Transfer',
-    desc: 'Money Added',
-
-    iconColor: 'rgb(228, 106, 118)',
-    iconBg: 'rgb(255, 244, 229)',
-    pcColor: 'green-600',
-  },
-  {
-    icon: <BsCurrencyDollar />,
-    amount: '-$50',
-    percentage: '+38%',
-    title: 'Refund',
-    desc: 'Payment Sent',
-    iconColor: '#03C9D7',
-    iconBg: '#E5FAFB',
     pcColor: 'red-600',
   },
 ];
@@ -717,57 +536,6 @@ export const medicalproBranding = {
     },
   ],
 };
-
-export const themeColors = [
-  {
-    name: 'blue-theme',
-    color: '#1A97F5',
-  },
-  {
-    name: 'green-theme',
-    color: '#03C9D7',
-  },
-  {
-    name: 'purple-theme',
-    color: '#7352FF',
-  },
-  {
-    name: 'red-theme',
-    color: '#FF5C8E',
-  },
-  {
-    name: 'indigo-theme',
-    color: '#1E4DB7',
-  },
-  {
-    color: '#FB9678',
-    name: 'orange-theme',
-  },
-];
-
-export const userProfileData = [
-  {
-    icon: <BsCurrencyDollar />,
-    title: 'My Profile',
-    desc: 'Account Settings',
-    iconColor: '#03C9D7',
-    iconBg: '#E5FAFB',
-  },
-  {
-    icon: <BsShield />,
-    title: 'My Inbox',
-    desc: 'Messages & Emails',
-    iconColor: 'rgb(0, 194, 146)',
-    iconBg: 'rgb(235, 250, 242)',
-  },
-  {
-    icon: <FiCreditCard />,
-    title: 'My Tasks',
-    desc: 'To-do and Daily Tasks',
-    iconColor: 'rgb(255, 244, 229)',
-    iconBg: 'rgb(254, 201, 15)',
-  },
-];
 
 export const ordersGrid = [
   {
@@ -1383,640 +1151,66 @@ export const customersData = [
 export const employeesData = [
   {
     EmployeeID: 1,
-    Name: 'Nancy Davolio',
-    Title: 'Sales Representative',
+    Name: 'Ice Cream',
     HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
+    Country: 'Dhaka',
+    ReportsTo: 'Roy',
     EmployeeImage:
-    avatar3,
+    product7,
   },
   {
     EmployeeID: 2,
-    Name: 'Nasimiyu Danai',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
+    Name: 'Fuits',
+    HireDate: '04/06/2022',
+    Country: 'Dhaka',
+    ReportsTo: 'Roy',
     EmployeeImage:
-      avatar3,
+      product6,
   },
   {
     EmployeeID: 3,
-    Name: 'Iulia Albu',
-    Title: 'HR',
-    HireDate: '01/02/2021',
-    Country: 'USA',
+    Name: 'Wine Glass',
+    HireDate: '11/12/2022',
+    Country: 'Dhaka',
     ReportsTo: 'Carson',
     EmployeeImage:
-      avatar4,
+      product5,
   },
   {
     EmployeeID: 4,
-    Name: 'Siegbert Gottfried',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
+    Name: 'Nike Shoe',
+    HireDate: '01/04/2022',
+    Country: 'Dhaka',
+    ReportsTo: 'Shihab',
     EmployeeImage:
-      avatar2,
+      product4,
   },
   {
     EmployeeID: 5,
-    Name: 'Omar Darobe',
-    Title: 'HR',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
+    Name: 'Lenovo Watch',
+    HireDate: '15/02/2021',
+    Country: 'Dhaka',
+    ReportsTo: 'Shihab',
     EmployeeImage:
-      avatar,
+      product3,
   },
   {
-    EmployeeID: 4,
-    Name: 'Penjani Inyene',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
+    EmployeeID: 6,
+    Name: 'Yellow Car',
+    HireDate: '28/04/2022',
+    Country: 'Dhaka',
+    ReportsTo: 'Shihab',
     EmployeeImage:
-      avatar,
+      product1,
   },
   {
-    EmployeeID: 5,
-    Name: 'Miron Vitold',
-    Title: 'HR',
-    HireDate: '01/02/2021',
-    Country: 'USA',
+    EmployeeID: 7,
+    Name: 'Sun Glass',
+    HireDate: '21/04/2021',
+    Country: 'Dhaka',
     ReportsTo: 'Carson',
     EmployeeImage:
-      avatar2,
-  },
-  {
-    EmployeeID: 1,
-    Name: 'Nancy Davolio',
-    Title: 'Sales Representative',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-    avatar2,
-
-  },
-  {
-    EmployeeID: 2,
-    Name: 'Nasimiyu Danai',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar3,
-  },
-  {
-    EmployeeID: 3,
-    Name: 'Iulia Albu',
-    Title: 'HR',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar4,
-  },
-  {
-    EmployeeID: 4,
-    Name: 'Siegbert Gottfried',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar2,
-  },
-  {
-    EmployeeID: 5,
-    Name: 'Omar Darobe',
-    Title: 'HR',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar,
-  },
-  {
-    EmployeeID: 4,
-    Name: 'Penjani Inyene',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar,
-  },
-  {
-    EmployeeID: 5,
-    Name: 'Miron Vitold',
-    Title: 'HR',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar2,
-  },
-  {
-    EmployeeID: 1,
-    Name: 'Nancy Davolio',
-    Title: 'Sales Representative',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-    avatar,
-  },
-  {
-    EmployeeID: 2,
-    Name: 'Nasimiyu Danai',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar3,
-  },
-  {
-    EmployeeID: 3,
-    Name: 'Iulia Albu',
-    Title: 'HR',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar4,
-  },
-  {
-    EmployeeID: 4,
-    Name: 'Siegbert Gottfried',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar2,
-  },
-  {
-    EmployeeID: 5,
-    Name: 'Omar Darobe',
-    Title: 'HR',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar,
-  },
-  {
-    EmployeeID: 4,
-    Name: 'Penjani Inyene',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar,
-  },
-  {
-    EmployeeID: 5,
-    Name: 'Miron Vitold',
-    Title: 'HR',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar2,
-  },
-  {
-    EmployeeID: 1,
-    Name: 'Nancy Davolio',
-    Title: 'Sales Representative',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-    avatar2,
-
-  },
-  {
-    EmployeeID: 2,
-    Name: 'Nasimiyu Danai',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar3,
-  },
-  {
-    EmployeeID: 3,
-    Name: 'Iulia Albu',
-    Title: 'HR',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar4,
-  },
-  {
-    EmployeeID: 4,
-    Name: 'Siegbert Gottfried',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar2,
-  },
-  {
-    EmployeeID: 5,
-    Name: 'Omar Darobe',
-    Title: 'HR',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar,
-  },
-  {
-    EmployeeID: 4,
-    Name: 'Penjani Inyene',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar,
-  },
-  {
-    EmployeeID: 5,
-    Name: 'Miron Vitold',
-    Title: 'HR',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar2,
-  },
-  {
-    EmployeeID: 1,
-    Name: 'Nancy Davolio',
-    Title: 'Sales Representative',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-    avatar2,
-
-  },
-  {
-    EmployeeID: 2,
-    Name: 'Nasimiyu Danai',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar3,
-  },
-  {
-    EmployeeID: 3,
-    Name: 'Iulia Albu',
-    Title: 'HR',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar4,
-  },
-  {
-    EmployeeID: 4,
-    Name: 'Siegbert Gottfried',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar2,
-  },
-  {
-    EmployeeID: 5,
-    Name: 'Omar Darobe',
-    Title: 'HR',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar,
-  },
-  {
-    EmployeeID: 4,
-    Name: 'Penjani Inyene',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar,
-  },
-  {
-    EmployeeID: 5,
-    Name: 'Miron Vitold',
-    Title: 'HR',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar2,
-  },
-  {
-    EmployeeID: 1,
-    Name: 'Nancy Davolio',
-    Title: 'Sales Representative',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-    avatar2,
-
-  },
-  {
-    EmployeeID: 2,
-    Name: 'Nasimiyu Danai',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar3,
-  },
-  {
-    EmployeeID: 3,
-    Name: 'Iulia Albu',
-    Title: 'HR',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar4,
-  },
-  {
-    EmployeeID: 4,
-    Name: 'Siegbert Gottfried',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar2,
-  },
-  {
-    EmployeeID: 5,
-    Name: 'Omar Darobe',
-    Title: 'HR',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar,
-  },
-  {
-    EmployeeID: 4,
-    Name: 'Penjani Inyene',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar,
-  },
-  {
-    EmployeeID: 5,
-    Name: 'Miron Vitold',
-    Title: 'HR',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar2,
-  },
-  {
-    EmployeeID: 1,
-    Name: 'Nancy Davolio',
-    Title: 'Sales Representative',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-    avatar2,
-
-  },
-  {
-    EmployeeID: 2,
-    Name: 'Nasimiyu Danai',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar3,
-  },
-  {
-    EmployeeID: 3,
-    Name: 'Iulia Albu',
-    Title: 'HR',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar4,
-  },
-  {
-    EmployeeID: 4,
-    Name: 'Siegbert Gottfried',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar2,
-  },
-  {
-    EmployeeID: 5,
-    Name: 'Omar Darobe',
-    Title: 'HR',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar,
-  },
-  {
-    EmployeeID: 4,
-    Name: 'Penjani Inyene',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar,
-  },
-  {
-    EmployeeID: 5,
-    Name: 'Miron Vitold',
-    Title: 'HR',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar2,
-  },
-  {
-    EmployeeID: 1,
-    Name: 'Nancy Davolio',
-    Title: 'Sales Representative',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-    avatar2,
-
-  },
-  {
-    EmployeeID: 2,
-    Name: 'Nasimiyu Danai',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar3,
-  },
-  {
-    EmployeeID: 3,
-    Name: 'Iulia Albu',
-    Title: 'HR',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar4,
-  },
-  {
-    EmployeeID: 4,
-    Name: 'Siegbert Gottfried',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar2,
-  },
-  {
-    EmployeeID: 5,
-    Name: 'Omar Darobe',
-    Title: 'HR',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar,
-  },
-  {
-    EmployeeID: 4,
-    Name: 'Penjani Inyene',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar,
-  },
-  {
-    EmployeeID: 5,
-    Name: 'Miron Vitold',
-    Title: 'HR',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar2,
-  },
-  {
-    EmployeeID: 1,
-    Name: 'Nancy Davolio',
-    Title: 'Sales Representative',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-    avatar2,
-
-  },
-  {
-    EmployeeID: 2,
-    Name: 'Nasimiyu Danai',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar3,
-  },
-  {
-    EmployeeID: 3,
-    Name: 'Iulia Albu',
-    Title: 'HR',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar4,
-  },
-  {
-    EmployeeID: 4,
-    Name: 'Siegbert Gottfried',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar2,
-  },
-  {
-    EmployeeID: 5,
-    Name: 'Omar Darobe',
-    Title: 'HR',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar,
-  },
-  {
-    EmployeeID: 4,
-    Name: 'Penjani Inyene',
-    Title: 'Marketing Head',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar,
-  },
-  {
-    EmployeeID: 5,
-    Name: 'Miron Vitold',
-    Title: 'HR',
-    HireDate: '01/02/2021',
-    Country: 'USA',
-    ReportsTo: 'Carson',
-    EmployeeImage:
-      avatar2,
+      product2,
   },
 ];
 
@@ -2027,7 +1221,7 @@ export const ordersData = [
 
     TotalAmount: 32.38,
     OrderItems: 'Fresh Tomato',
-    Location: 'USA',
+    Location: 'Dhaka',
     Status: 'pending',
     StatusBg: '#FB9678',
     ProductImage:
@@ -3118,359 +2312,6 @@ export const stackedPrimaryYAxis = {
   minorTickLines: { width: 0 },
   labelFormat: '{value}',
 };
-
-export const kanbanData = [
-  {
-    Id: 'Task 1',
-    Title: 'Task - 29001',
-    Status: 'Open',
-    Summary: 'Analyze the new requirements gathered from the customer.',
-    Type: 'Story',
-    Priority: 'Low',
-    Tags: 'Analyze,Customer',
-    Estimate: 3.5,
-    Assignee: 'Nancy Davloio',
-    RankId: 1,
-    Color: '#02897B',
-    ClassName: 'e-story, e-low, e-nancy-davloio',
-  },
-  {
-    Id: 'Task 2',
-    Title: 'Task - 29002',
-    Status: 'InProgress',
-    Summary: 'Improve application performance',
-    Type: 'Improvement',
-    Priority: 'Normal',
-    Tags: 'Improvement',
-    Estimate: 6,
-    Assignee: 'Andrew Fuller',
-    RankId: 1,
-    Color: '#673AB8',
-    ClassName: 'e-improvement, e-normal, e-andrew-fuller',
-  },
-  {
-    Id: 'Task 3',
-    Title: 'Task - 29003',
-    Status: 'Open',
-    Summary: 'Arrange a web meeting with the customer to get new requirements.',
-    Type: 'Others',
-    Priority: 'Critical',
-    Tags: 'Meeting',
-    Estimate: 5.5,
-    Assignee: 'Janet Leverling',
-    RankId: 2,
-    Color: '#1F88E5',
-    ClassName: 'e-others, e-critical, e-janet-leverling',
-  },
-  {
-    Id: 'Task 4',
-    Title: 'Task - 29004',
-    Status: 'InProgress',
-    Summary: 'Fix the issues reported in the IE browser.',
-    Type: 'Bug',
-    Priority: 'Critical',
-    Tags: 'IE',
-    Estimate: 2.5,
-    Assignee: 'Janet Leverling',
-    RankId: 2,
-    Color: '#E64A19',
-    ClassName: 'e-bug, e-release, e-janet-leverling',
-  },
-  {
-    Id: 'Task 5',
-    Title: 'Task - 29005',
-    Status: 'Review',
-    Summary: 'Fix the issues reported by the customer.',
-    Type: 'Bug',
-    Priority: 'Low',
-    Tags: 'Customer',
-    Estimate: '3.5',
-    Assignee: 'Steven walker',
-    RankId: 1,
-    Color: '#E64A19',
-    ClassName: 'e-bug, e-low, e-steven-walker',
-  },
-  {
-    Id: 'Task 6',
-    Title: 'Task - 29007',
-    Status: 'Validate',
-    Summary: 'Validate new requirements',
-    Type: 'Improvement',
-    Priority: 'Low',
-    Tags: 'Validation',
-    Estimate: 1.5,
-    Assignee: 'Robert King',
-    RankId: 1,
-    Color: '#673AB8',
-    ClassName: 'e-improvement, e-low, e-robert-king',
-  },
-  {
-    Id: 'Task 7',
-    Title: 'Task - 29009',
-    Status: 'Review',
-    Summary: 'Fix the issues reported in Safari browser.',
-    Type: 'Bug',
-    Priority: 'Critical',
-    Tags: 'Fix,Safari',
-    Estimate: 1.5,
-    Assignee: 'Nancy Davloio',
-    RankId: 2,
-    Color: '#E64A19',
-    ClassName: 'e-bug, e-release, e-nancy-davloio',
-  },
-  {
-    Id: 'Task 8',
-    Title: 'Task - 29010',
-    Status: 'Close',
-    Summary: 'Test the application in the IE browser.',
-    Type: 'Story',
-    Priority: 'Low',
-    Tags: 'Review,IE',
-    Estimate: 5.5,
-    Assignee: 'Margaret hamilt',
-    RankId: 3,
-    Color: '#02897B',
-    ClassName: 'e-story, e-low, e-margaret-hamilt',
-  },
-  {
-    Id: 'Task 9',
-    Title: 'Task - 29011',
-    Status: 'Validate',
-    Summary: 'Validate the issues reported by the customer.',
-    Type: 'Story',
-    Priority: 'High',
-    Tags: 'Validation,Fix',
-    Estimate: 1,
-    Assignee: 'Steven walker',
-    RankId: 1,
-    Color: '#02897B',
-    ClassName: 'e-story, e-high, e-steven-walker',
-  },
-  {
-    Id: 'Task 10',
-    Title: 'Task - 29015',
-    Status: 'Open',
-    Summary: 'Show the retrieved data from the server in grid control.',
-    Type: 'Story',
-    Priority: 'High',
-    Tags: 'Database,SQL',
-    Estimate: 5.5,
-    Assignee: 'Margaret hamilt',
-    RankId: 4,
-    Color: '#02897B',
-    ClassName: 'e-story, e-high, e-margaret-hamilt',
-  },
-  {
-    Id: 'Task 11',
-    Title: 'Task - 29016',
-    Status: 'InProgress',
-    Summary: 'Fix cannot open user’s default database SQL error.',
-    Priority: 'Critical',
-    Type: 'Bug',
-    Tags: 'Database,Sql2008',
-    Estimate: 2.5,
-    Assignee: 'Janet Leverling',
-    RankId: 4,
-    Color: '#E64A19',
-    ClassName: 'e-bug, e-critical, e-janet-leverling',
-  },
-  {
-    Id: 'Task 12',
-    Title: 'Task - 29017',
-    Status: 'Review',
-    Summary: 'Fix the issues reported in data binding.',
-    Type: 'Story',
-    Priority: 'Normal',
-    Tags: 'Databinding',
-    Estimate: '3.5',
-    Assignee: 'Janet Leverling',
-    RankId: 4,
-    Color: '#02897B',
-    ClassName: 'e-story, e-normal, e-janet-leverling',
-  },
-  {
-    Id: 'Task 13',
-    Title: 'Task - 29018',
-    Status: 'Close',
-    Summary: 'Analyze SQL server 2008 connection.',
-    Type: 'Story',
-    Priority: 'Critical',
-    Tags: 'Grid,Sql',
-    Estimate: 2,
-    Assignee: 'Andrew Fuller',
-    RankId: 4,
-    Color: '#02897B',
-    ClassName: 'e-story, e-release, e-andrew-fuller',
-  },
-  {
-    Id: 'Task 14',
-    Title: 'Task - 29019',
-    Status: 'Validate',
-    Summary: 'Validate databinding issues.',
-    Type: 'Story',
-    Priority: 'Low',
-    Tags: 'Validation',
-    Estimate: 1.5,
-    Assignee: 'Margaret hamilt',
-    RankId: 1,
-    Color: '#02897B',
-    ClassName: 'e-story, e-low, e-margaret-hamilt',
-  },
-  {
-    Id: 'Task 15',
-    Title: 'Task - 29020',
-    Status: 'Close',
-    Summary: 'Analyze grid control.',
-    Type: 'Story',
-    Priority: 'High',
-    Tags: 'Analyze',
-    Estimate: 2.5,
-    Assignee: 'Margaret hamilt',
-    RankId: 5,
-    Color: '#02897B',
-    ClassName: 'e-story, e-high, e-margaret-hamilt',
-  },
-  {
-    Id: 'Task 16',
-    Title: 'Task - 29021',
-    Status: 'Close',
-    Summary: 'Stored procedure for initial data binding of the grid.',
-    Type: 'Others',
-    Priority: 'Critical',
-    Tags: 'Databinding',
-    Estimate: 1.5,
-    Assignee: 'Steven walker',
-    RankId: 6,
-    Color: '#1F88E5',
-    ClassName: 'e-others, e-release, e-steven-walker',
-  },
-  {
-    Id: 'Task 17',
-    Title: 'Task - 29022',
-    Status: 'Close',
-    Summary: 'Analyze stored procedures.',
-    Type: 'Story',
-    Priority: 'Critical',
-    Tags: 'Procedures',
-    Estimate: 5.5,
-    Assignee: 'Janet Leverling',
-    RankId: 7,
-    Color: '#02897B',
-    ClassName: 'e-story, e-release, e-janet-leverling',
-  },
-  {
-    Id: 'Task 18',
-    Title: 'Task - 29023',
-    Status: 'Validate',
-    Summary: 'Validate editing issues.',
-    Type: 'Story',
-    Priority: 'Critical',
-    Tags: 'Editing',
-    Estimate: 1,
-    Assignee: 'Nancy Davloio',
-    RankId: 1,
-    Color: '#02897B',
-    ClassName: 'e-story, e-critical, e-nancy-davloio',
-  },
-  {
-    Id: 'Task 19',
-    Title: 'Task - 29024',
-    Status: 'Review',
-    Summary: 'Test editing functionality.',
-    Type: 'Story',
-    Priority: 'Normal',
-    Tags: 'Editing,Test',
-    Estimate: 0.5,
-    Assignee: 'Nancy Davloio',
-    RankId: 5,
-    Color: '#02897B',
-    ClassName: 'e-story, e-normal, e-nancy-davloio',
-  },
-  {
-    Id: 'Task 20',
-    Title: 'Task - 29025',
-    Status: 'Open',
-    Summary: 'Enhance editing functionality.',
-    Type: 'Improvement',
-    Priority: 'Low',
-    Tags: 'Editing',
-    Estimate: 3.5,
-    Assignee: 'Andrew Fuller',
-    RankId: 5,
-    Color: '#673AB8',
-    ClassName: 'e-improvement, e-low, e-andrew-fuller',
-  },
-  {
-    Id: 'Task 21',
-    Title: 'Task - 29026',
-    Status: 'InProgress',
-    Summary: 'Improve the performance of the editing functionality.',
-    Type: 'Epic',
-    Priority: 'High',
-    Tags: 'Performance',
-    Estimate: 6,
-    Assignee: 'Nancy Davloio',
-    RankId: 5,
-    Color: '#e91e64',
-    ClassName: 'e-epic, e-high, e-nancy-davloio',
-  },
-  {
-    Id: 'Task 22',
-    Title: 'Task - 29027',
-    Status: 'Open',
-    Summary: 'Arrange web meeting with the customer to show editing demo.',
-    Type: 'Others',
-    Priority: 'High',
-    Tags: 'Meeting,Editing',
-    Estimate: 5.5,
-    Assignee: 'Steven walker',
-    RankId: 6,
-    Color: '#1F88E5',
-    ClassName: 'e-others, e-high, e-steven-walker',
-  },
-  {
-    Id: 'Task 23',
-    Title: 'Task - 29029',
-    Status: 'Review',
-    Summary: 'Fix the editing issues reported by the customer.',
-    Type: 'Bug',
-    Priority: 'Low',
-    Tags: 'Editing,Fix',
-    Estimate: '3.5',
-    Assignee: 'Janet Leverling',
-    RankId: 6,
-    Color: '#E64A19',
-    ClassName: 'e-bug, e-low, e-janet-leverling',
-  },
-  {
-    Id: 'Task 24',
-    Title: 'Task - 29030',
-    Status: 'Testing',
-    Summary: 'Fix the issues reported by the customer.',
-    Type: 'Bug',
-    Priority: 'Critical',
-    Tags: 'Customer',
-    Estimate: '3.5',
-    Assignee: 'Steven walker',
-    RankId: 1,
-    Color: '#E64A19',
-    ClassName: 'e-bug, e-critical, e-steven-walker',
-  },
-  {
-    Id: 'Task 25',
-    Title: 'Task - 29031',
-    Status: 'Testing',
-    Summary: 'Fix the issues reported in Safari browser.',
-    Type: 'Bug',
-    Priority: 'Critical',
-    Tags: 'Fix,Safari',
-    Estimate: 1.5,
-    Assignee: 'Nancy Davloio',
-    RankId: 2,
-    Color: '#E64A19',
-    ClassName: 'e-bug, e-release, e-nancy-davloio',
-  },
-];
 
 export const financialChartData = [
   {
@@ -5761,12 +4602,4 @@ export const financialChartData = [
     close: 158.67,
     volume: 27939544,
   },
-];
-export const PyramidData = [
-  { x: 'Sweet Treats', y: 120, text: '120 cal' },
-  { x: 'Milk, Youghnut, Cheese', y: 435, text: '435 cal' },
-  { x: 'Vegetables', y: 470, text: '470 cal' },
-  { x: 'Meat, Poultry, Fish', y: 475, text: '475 cal' },
-  { x: 'Fruits', y: 520, text: '520 cal' },
-  { x: 'Bread, Rice, Pasta', y: 930, text: '930 cal' },
 ];
