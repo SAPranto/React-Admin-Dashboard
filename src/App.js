@@ -1,21 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar, Footer, Sidebar } from './components';
-import { Ecommerce, Orders, Customers, Viewproducts, AddProduct } from './pages';
+import { Ecommerce, Orders, Customers, Viewproducts, AddProduct, Login } from './pages';
 import './App.css';
 import { useStateContext } from './contexts/ContextProvider';
 
 const App = () => {
-  const { setCurrentColor, setCurrentMode, activeMenu } = useStateContext();
-
-  useEffect(() => {
-    const currentThemeColor = localStorage.getItem('colorMode');
-    const currentThemeMode = localStorage.getItem('themeMode');
-    if (currentThemeColor && currentThemeMode) {
-      setCurrentColor(currentThemeColor);
-      setCurrentMode(currentThemeMode);
-    }
-  }, []);
+  const { activeMenu } = useStateContext();
 
   return (
     <div>
@@ -43,7 +34,7 @@ const App = () => {
             <div>
               <Routes>
                 {/* dashboard  */}
-                <Route path="/" element={(<Ecommerce />)} />
+                <Route path="/" element={(<Login />)} />
                 <Route path="/ecommerce" element={(<Ecommerce />)} />
 
                 {/* pages  */}
