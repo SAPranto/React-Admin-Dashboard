@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar, Footer, Sidebar } from './components';
-import { Ecommerce, Orders, Customers, Viewproducts, AddProduct, Login } from './pages';
+import { Ecommerce, Orders, Customers, Viewproducts, AddProduct } from './pages';
 import './App.css';
 import { useStateContext } from './contexts/ContextProvider';
 
@@ -34,7 +34,7 @@ const App = () => {
             <div>
               <Routes>
                 {/* dashboard  */}
-                <Route path="/" element={(<Login />)} />
+                <Route path="/" element={(<Ecommerce  />)} />
                 <Route path="/ecommerce" element={(<Ecommerce />)} />
 
                 {/* pages  */}
