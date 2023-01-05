@@ -34,14 +34,14 @@ const App = () => {
             <div>
               <Routes>
                 {/* dashboard  */}
-                <Route path="/" element={(<Ecommerce  />)} />
+                <Route path="/" element={(<Ecommerce />)} />
                 <Route path="/ecommerce" element={(<Ecommerce />)} />
 
                 {/* pages  */}
                 <Route path="/orders" element={<Orders />} />
                 <Route path="/customers" element={<Customers />} />
                 <Route path="/view%20products" element={<Viewproducts />} />
-                <Route path="/add%20product" element={<AddProduct />} />
+                <Route path="/addproduct" element={<AddProduct />} />
 
               </Routes>
             </div>
