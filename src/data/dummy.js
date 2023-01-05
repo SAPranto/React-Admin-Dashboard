@@ -367,11 +367,11 @@ export const links = [
         icon: <AiOutlineShoppingCart />,
       },
       {
-        name: 'view products',
+        name: 'viewproducts',
         icon: <BsEye />,
       },
       {
-        name: 'add product',
+        name: 'addproduct',
         icon: <MdAddShoppingCart />,
       },
       {
