@@ -1,7 +1,15 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './App';
-import './index.css';
+import ReactDOM from 'react-dom';
 
-const root = document.getElementById('root');
-createRoot(root).render(<App />);
+import './index.css';
+import App from './App';
+import { ContextProvider } from './contexts/ContextProvider';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <ContextProvider>
+      <App />
+    </ContextProvider>
+  </React.StrictMode>,
+  document.getElementById('root'),
+);
